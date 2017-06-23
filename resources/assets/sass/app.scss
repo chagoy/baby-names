@@ -1,7 +1,18 @@
+.panel {
+  text-align: center;
+}
+
+.title {
+  font-family: 'Coming Soon', cursive;
+  text-align: center;
+  font-size: 3em;
+  color: #416165;
+}
+
 .switch-field {
-  font-family: "Lucida Grande", Tahoma, Verdana, sans-serif;
   padding: 40px;
     overflow: hidden;
+  text-align: center;
 }
 
 .switch-title {
@@ -18,7 +29,7 @@
 }
 
 .switch-field label {
-  float: left;
+  float: none;
 }
 
 .switch-field label {
@@ -27,6 +38,7 @@
   background-color: #e4e4e4;
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
+  font-family: 'Coming Soon', cursive;
   font-weight: normal;
   text-align: center;
   text-shadow: none;
@@ -46,7 +58,7 @@
 }
 
 .switch-field input:checked + label {
-  background-color: #A5DC86;
+  background-color: #D9DBF1;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -57,4 +69,16 @@
 
 .switch-field label:last-of-type {
   border-radius: 0 4px 4px 0;
+}
+
+input[type="text"] {
+  font-family: 'Coming Soon', cursive;
+  width: 33%;
+  height: 30px;
+  padding: 10px 10px 10px 10px;
+  box-sizing: border-box;
+  border: 1.5px solid #010101;
+  color: #01579B;
+  border-radius: 10px;
+  font-size: 1.2em;
 }

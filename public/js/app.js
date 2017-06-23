@@ -1666,6 +1666,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -1684,6 +1685,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
     computed: {
+        legendSex: function legendSex() {
+            if (this.sex == 'M') {
+                return 'boy';
+            } else {
+                return 'girl';
+            }
+        },
+
         borderColor: function borderColor() {
             if (this.sex == 'M') {
                 return 'rgba(54, 162, 235, 1)';
@@ -31833,7 +31842,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         _vm.name = $event.target.value
       }
     }
-  })]), _vm._v(" "), _c('div', {
+  }), _vm._v(" "), _c('div', {
     staticClass: "switch-field"
   }, [_c('input', {
     directives: [{
@@ -31861,7 +31870,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "for": "male"
     }
-  }, [_vm._v("Male")]), _vm._v(" "), _c('input', {
+  }, [_vm._v("Boy")]), _vm._v(" "), _c('input', {
     directives: [{
       name: "model",
       rawName: "v-model",
@@ -31886,7 +31895,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "for": "female"
     }
-  }, [_vm._v("Female")])])]), _vm._v(" "), _c('div', [(this.values && this.labels) ? _c('graph', {
+  }, [_vm._v("Girl")])])])]), _vm._v(" "), _c('div', [(this.values && this.labels) ? _c('graph', {
     attrs: {
       "id": "myChart",
       "labels": this.labels,
@@ -31894,7 +31903,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "sex": this.sex,
       "name": this.name,
       "backgroundColor": this.backgroundColor,
-      "borderColor": this.borderColor
+      "borderColor": this.borderColor,
+      "legendSex": this.legendSex
     }
   }) : _vm._e()], 1)])
 },staticRenderFns: []}
@@ -70443,7 +70453,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-	props: ['labels', 'values', 'name', 'sex', 'borderColor', 'backgroundColor'],
+	props: ['labels', 'values', 'name', 'sex', 'borderColor', 'backgroundColor', 'legendSex'],
 
 	// data() {
 	// 	return {
@@ -70459,7 +70469,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 			data: {
 				labels: this.labels,
 				datasets: [{
-					label: '# of ' + this.sex + ' babies named ' + this.name,
+					label: '# of ' + this.legendSex + ' babies named ' + this.name,
 					data: this.values,
 					backgroundColor: [this.backgroundColor],
 					borderColor: [this.color],

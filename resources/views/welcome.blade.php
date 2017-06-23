@@ -5,12 +5,15 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
+        <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
         <title>Names</title>
     </head>
     <body>
         <div id="app">
-            <search></search>
+            <h1 class="title">Baby Name Tracker</h1>
+                <search></search>
+            
         </div>
         <script src="{{ asset('js/app.js') }}"></script>
     </body>

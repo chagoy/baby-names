@@ -6,7 +6,7 @@
 
 <script>
 	export default {
-		props: ['labels', 'values', 'name', 'sex', 'borderColor', 'backgroundColor'],
+		props: ['labels', 'values', 'name', 'sex', 'borderColor', 'backgroundColor', 'legendSex'],
 
 		// data() {
 		// 	return {
@@ -22,7 +22,7 @@
 			    data: {
 			        labels: this.labels,
 			        datasets: [{
-			            label: '# of ' + this.sex + ' babies named ' + this.name,
+			            label: '# of ' + this.legendSex + ' babies named ' + this.name,
 			            data: this.values,
 			            backgroundColor: [
 			                this.backgroundColor

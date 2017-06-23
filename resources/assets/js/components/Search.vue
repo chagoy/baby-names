@@ -3,16 +3,17 @@
         <div class="row">
             <div class="panel">
                 <input type="text" class="input" placeholder="Enter name..." v-model="name" v-on:keyup="autoComplete">
-            </div>
-            <div class="switch-field">
-                <input v-on:change="autoComplete" type="radio" id="male" v-model="sex" value="M" checked/>
-                <label for="male">Male</label>
-                <input v-on:change="autoComplete" type="radio" id="female" v-model="sex" value="F" />
-                <label for="female">Female</label>
+                <div class="switch-field">
+                    <input v-on:change="autoComplete" type="radio" id="male" v-model="sex" value="M" checked/>
+                    <label for="male">Boy</label>
+
+                    <input v-on:change="autoComplete" type="radio" id="female" v-model="sex" value="F" />
+                    <label for="female">Girl</label>
+                </div>
             </div>
         </div>
         <div>
-            <graph v-if="this.values && this.labels" id="myChart" :labels="this.labels" :values="this.values" :sex="this.sex" :name="this.name" :backgroundColor="this.backgroundColor" :borderColor="this.borderColor"></graph>
+            <graph v-if="this.values && this.labels" id="myChart" :labels="this.labels" :values="this.values" :sex="this.sex" :name="this.name" :backgroundColor="this.backgroundColor" :borderColor="this.borderColor" :legendSex="this.legendSex"></graph>
         </div>
     </div>
 </template>
@@ -34,6 +35,14 @@
         },
 
         computed: {
+            legendSex: function () {
+                if (this.sex == 'M') {
+                    return 'boy'
+                } else {
+                    return 'girl';
+                }
+            },
+
             borderColor: function () {
                 if (this.sex == 'M') {
                     return 'rgba(54, 162, 235, 1)';

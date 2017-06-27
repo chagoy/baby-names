@@ -12,7 +12,7 @@
     <body>
         <div id="app">
             <h1 class="title">Baby Name Tracker</h1>
-                <search></search>
+                @yield('content')   
             
         </div>
         <script src="{{ asset('js/app.js') }}"></script>

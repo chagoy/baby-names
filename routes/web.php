@@ -14,7 +14,9 @@ use App\Name;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.name');
 });
 
 Route::get('/names', 'NamesController@show');
+
+Route::get('/{year}', 'YearsController@show');

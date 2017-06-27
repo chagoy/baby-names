@@ -17,6 +17,7 @@ window.Vue = require('vue');
 
 Vue.component('search', require('./components/Search.vue'));
 Vue.component('graph', require('./components/Graph.vue'));
+Vue.component('chart', require('./components/Chart.vue'));
 
 const app = new Vue({
     el: '#app'

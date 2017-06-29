@@ -1666,8 +1666,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -31819,8 +31817,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('div', {
     staticClass: "row"
-  }, [_c('div', {
-    staticClass: "panel"
   }, [_c('input', {
     directives: [{
       name: "model",
@@ -31896,7 +31892,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "for": "female"
     }
-  }, [_vm._v("Girl")])])])]), _vm._v(" "), _c('div', [(this.values && this.labels) ? _c('graph', {
+  }, [_vm._v("Girl")])])]), _vm._v(" "), _c('div', [(this.values && this.labels) ? _c('graph', {
     attrs: {
       "id": "myChart",
       "labels": this.labels,

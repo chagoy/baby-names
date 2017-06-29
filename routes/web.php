@@ -19,4 +19,6 @@ Route::get('/', function () {
 
 Route::get('/names', 'NamesController@show');
 
+Route::get('/top', 'NamesController@index');
+
 Route::get('/{year}', 'YearsController@show');

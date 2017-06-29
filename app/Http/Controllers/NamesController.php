@@ -16,4 +16,13 @@ class NamesController extends Controller
     			->pluck('count', 'year');
     	return response()->json($data);
     }
+
+    public function index()
+    {
+    	$boys = Name::where('sex', 'M')->orderBy('count', 'desc')->take(50)->get();
+
+    	$girls = Name::where('sex', 'F')->orderBy('count', 'desc')->take(50)->get();
+
+    	return view('layouts.top', compact('boys', 'girls'));
+    }
 }
